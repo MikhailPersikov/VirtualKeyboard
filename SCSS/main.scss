@@ -1,0 +1,26 @@
+body {
+  box-sizing: border-box;
+}
+
+.wrapper{
+  width: 700px;
+  height: 200px;
+  margin: 0px auto;
+
+  .output{
+    width: 700px;
+    height: 200px;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+  }
+}
+
+.entry{
+  margin: 20px auto;
+  width: 700px;
+  height: 200px;
+  background-color: rgb(238, 14, 14);
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+}
