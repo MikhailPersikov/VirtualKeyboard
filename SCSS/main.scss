@@ -17,10 +17,22 @@ body {
 }
 
 .entry{
+  display: flex;
   margin: 20px auto;
+  padding: 10px;
   width: 700px;
   height: 200px;
   background-color: rgb(238, 14, 14);
   color: rgb(255, 255, 255);
   font-size: 15px;
 }
+
+.buttons{
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  background-color: rgb(10, 139, 10);
+  text-align: center;
+  line-height: 50px;
+  color: black;
+} 

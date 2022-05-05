@@ -1,6 +1,10 @@
+import {english} from './languages.js';
+
 const output = document.querySelector('.output');
 
 let area = '';
+
+const atherButtons = ["Alt", "Backspace", "Control", "Tab", "CapsLock", "Shift"];
 
 const removeWord = () => {
   console.log('work')
@@ -8,15 +12,6 @@ const removeWord = () => {
   console.log(area)
   output.innerHTML = area;
 }
-
-// const atherButtons = {
-//   alt:"Alt",
-//   backspace:"Backspace",
-//   ctrl:"Control",
-//   tab:"Tab"
-// }
-
-const atherButtons = ["Alt", "Backspace", "Control", "Tab", "CapsLock", "Shift"];
 
 const showFunction = (e) => {
   const isButton = atherButtons.includes(e.key);
@@ -40,7 +35,20 @@ const buildEntry = () => {
   document.body.appendChild(div);
 }
 
+const createButtons = (letter) => {
+  const entry = document.querySelector('.entry');
+  const div = document.createElement('div');
+  div.className = 'buttons';
+  entry.appendChild(div);
+  div.textContent = letter;
+}
+
+const choseLenguage = (languages) => {
+  languages.forEach(el => {
+    createButtons(el)
+  })
+}
+
 buildEntry();
+choseLenguage(english[0]);
 window.addEventListener('keydown',showFunction);
-
-
